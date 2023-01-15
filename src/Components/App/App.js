@@ -8,34 +8,42 @@ let init = "# Welcome to my React Markdown Previewer!\n\n## This is a sub-headin
 function App() {
   const [editorText, setEditorText] = useState(init);
 
-  useEffect (() => {
+  useEffect(() => {
     const preview = document.getElementById('preview');
     preview.innerHTML = editorText;
     return () => { }
-  }, [editorText]); 
+  }, [editorText]);
 
   return (
     <Container className="App" fluid>
       <Card>
         <Card.Header>Markdown Previewer</Card.Header>
         {/* Content Container */}
-        <Card.Body style={{ minHeight: '70vh' }}>
+        <Card.Body >
           <Row>
             {/* md Editor */}
             <Col>
               <Card>
                 <Card.Header>md Editor</Card.Header>
-                <Form.Control as='textarea' id='editor'  value={editorText} onChange={(event) => { 
-                  setEditorText(event.target.value);
-                }}/>
+                <Form.Control as='textarea'
+                  id='editor'
+                  value={editorText}
+                  style={{
+                    minHeight: '70vh'
+                  }}
+                  onChange={(event) => {
+                    setEditorText(event.target.value);
+                  }} />
               </Card>
             </Col>
             {/* md Previewer */}
             <Col>
               <Card>
                 <Card.Header>md Previewer</Card.Header>
-                <Card.Body>
-                  <div id='preview'></div>
+                <Card.Body style={{
+                  minHeight: '70vh'
+                }}>
+                  <div id='preview' ></div>
                 </Card.Body>
               </Card>
             </Col>
@@ -45,6 +53,8 @@ function App() {
     </Container >
   );
 }
+
+
 
 
 

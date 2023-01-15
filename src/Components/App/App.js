@@ -27,22 +27,19 @@ function App() {
   return (
     <Container className="App" fluid >
       <Card className='vh-100'>
-        <Card.Header className='text-center display-6'>Markdown Previewer
-          <span className='fs-6 text-white'>by <a href='https://github.com/BetaKrankri/MakrdownPreview'
+        <Card.Header className='text-center display-6'>Markdown Previewer  
+          <span className='fs-6 text-white'>  by <a href='https://github.com/BetaKrankri/MakrdownPreview'
             target='_blank'
             rel="noreferrer"
             style={{ textDecoration: 'none', color: 'white', fontWeight: 600 }}>BetaKrankri</a></span>
         </Card.Header>
-    <Container className="App" fluid >
-      <Card className='vh-100'>
-        <Card.Header className='text-center display-6'>Markdown Previewer <span className='fs-6'>by <a href='' >BetaKrankri</a></span></Card.Header>
         {/* Content Container */}
         <Card.Body >
           <Row>
             {/* md Editor */}
             <Col xs={6}>
               <Card>
-                <Card.Header>md Editor</Card.Header>
+                <Card.Header className='text-end'>md Editor</Card.Header>
                 <Form.Control as='textarea'
                   id='editor'
                   value={editorText}
@@ -57,7 +54,7 @@ function App() {
             {/* md Previewer */}
             <Col xs={6}>
               <Card>
-                <Card.Header>md Previewer</Card.Header>
+                <Card.Header className='text-end'>md Previewer</Card.Header>
                 <Card.Body style={{
                   height: '70vh',
                   overflow: 'scroll'

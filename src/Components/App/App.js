@@ -33,6 +33,9 @@ function App() {
             rel="noreferrer"
             style={{ textDecoration: 'none', color: 'white', fontWeight: 600 }}>BetaKrankri</a></span>
         </Card.Header>
+    <Container className="App" fluid >
+      <Card className='vh-100'>
+        <Card.Header className='text-center display-6'>Markdown Previewer <span className='fs-6'>by <a href='' >BetaKrankri</a></span></Card.Header>
         {/* Content Container */}
         <Card.Body >
           <Row>
